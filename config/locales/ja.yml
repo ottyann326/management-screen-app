@@ -16,4 +16,8 @@ ja:
       racket:
         name: '名前'
         price: '価格'
-        type: '種類'
+        kind: '種類'
+        user: '所有者'
+        purchase_date: '購入日'
+        created_at: '作成日時'
+        updated_at: '更新日時'

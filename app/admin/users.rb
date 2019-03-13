@@ -15,4 +15,17 @@ ActiveAdmin.register User do
     column :updated_at
     actions
   end
+
+  show do |user|
+    attributes_table(*user.class.columns.collect { |column| column.name.to_sym })
+    panel '所持ラケット一覧' do
+      table_for user.rackets do
+        column :name
+        column :price
+        column :kind
+        column :purchase_date
+      end
+    end
+    active_admin_comments
+  end
 end
